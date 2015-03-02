@@ -17,6 +17,7 @@ public final class Multiteca {
 	
 	public void setMultiteca(ArrayList<Obra> obras) {
 		
+		multiteca=obras;
 	}
 	
 	public ArrayList<Obra> getMultiteca() {
@@ -26,6 +27,7 @@ public final class Multiteca {
 	
 	public void addObra(Obra obra) {
 		
+		multiteca.add(obra);	
 	}
 	
 	public Obra obtainObra(int index) {
@@ -34,6 +36,7 @@ public final class Multiteca {
 	}
 	
 	public static int counter() {
+		
 		return numObras;
 	}
 	
