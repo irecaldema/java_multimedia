@@ -20,7 +20,7 @@ public final class Multiteca {
 	}
 	
 	public ArrayList<Obra> getMultiteca() {
-		
+		return multiteca;
 	}
 	
 	public void addObra(Obra obra) {
@@ -28,7 +28,7 @@ public final class Multiteca {
 	}
 	
 	public Obra obtainObra(int index) {
-		
+		return multiteca.get(index);
 	}
 	
 	public static int counter() {
@@ -36,7 +36,8 @@ public final class Multiteca {
 	}
 	
 	public String formattedMultiteca() {
-		
+		String formattedMultiteca="";
+		return formattedMultiteca;
 	}
 	
 }

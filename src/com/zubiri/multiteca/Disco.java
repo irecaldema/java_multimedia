@@ -32,6 +32,7 @@ public class Disco extends Obra{
 	}
 	
 	public String formattedObra() {
-		
+		String formattedObra=super.formattedObra()+"";
+		return formattedObra;	
 	}
 }

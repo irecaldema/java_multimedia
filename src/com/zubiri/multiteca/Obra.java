@@ -43,6 +43,7 @@ public abstract class Obra {
 	}
 	
 	public String formattedObra() {
-		
+		String formattedObra="";
+		return formattedObra;
 	}
 }

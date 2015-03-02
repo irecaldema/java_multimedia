@@ -32,7 +32,8 @@ public class Libro extends Obra{
 	}
 	
 	public String formattedObra() {
-		
+		String formattedObra=super.formattedObra()+"";
+		return formattedObra;	
 	}
 
 }
