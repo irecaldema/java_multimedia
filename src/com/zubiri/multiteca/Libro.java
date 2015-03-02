@@ -6,6 +6,7 @@ public class Libro extends Obra{
 	private int numPaginas;
 	
 	public Libro(String titulo, Artista autor, int añoEdicion, String editorial, int numPaginas) {
+		
 		super(titulo,autor,añoEdicion);
 		setEditorial(editorial);
 		setNumPaginas(numPaginas);
@@ -32,6 +33,7 @@ public class Libro extends Obra{
 	}
 	
 	public String formattedObra() {
+		
 		String formattedObra=super.formattedObra()+"";
 		return formattedObra;	
 	}

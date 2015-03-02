@@ -34,6 +34,7 @@ public class Pelicula extends Obra{
 	}
 	
 	public String formattedObra() {
+		
 		String formattedObra=super.formattedObra()+"";
 		return formattedObra;	
 	}

@@ -6,6 +6,7 @@ public class Disco extends Obra{
 	private int nCanciones;
 	
 	public Disco(String titulo, Artista autor, int añoEdicion, String discografia, int nCanciones) {
+		
 		super(titulo,autor,añoEdicion);
 		setDiscografia(discografia);
 		setnCanciones(nCanciones);
@@ -32,6 +33,7 @@ public class Disco extends Obra{
 	}
 	
 	public String formattedObra() {
+		
 		String formattedObra=super.formattedObra()+"";
 		return formattedObra;	
 	}

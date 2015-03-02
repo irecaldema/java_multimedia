@@ -20,6 +20,7 @@ public final class Multiteca {
 	}
 	
 	public ArrayList<Obra> getMultiteca() {
+		
 		return multiteca;
 	}
 	
@@ -28,6 +29,7 @@ public final class Multiteca {
 	}
 	
 	public Obra obtainObra(int index) {
+		
 		return multiteca.get(index);
 	}
 	
@@ -36,6 +38,7 @@ public final class Multiteca {
 	}
 	
 	public String formattedMultiteca() {
+		
 		String formattedMultiteca="";
 		return formattedMultiteca;
 	}
