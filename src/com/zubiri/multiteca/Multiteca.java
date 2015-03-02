@@ -31,8 +31,8 @@ public final class Multiteca {
 		
 	}
 	
-	public static counter() {
-		
+	public static int counter() {
+		return numObras;
 	}
 	
 	public String formattedMultiteca() {

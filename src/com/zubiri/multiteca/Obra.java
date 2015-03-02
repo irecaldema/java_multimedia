@@ -4,17 +4,17 @@ public abstract class Obra {
 	
 	private String titulo;
 	private Artista autor;
-	private int añoEdicion;
+	private int aÃ±oEdicion;
 	
 	public Obra() {
 		
 	}
 	
-	public Obra(String titulo, Artista autor, int añoEdicion) {
+	public Obra(String titulo, Artista autor, int aÃ±oEdicion) {
 	
 		this.titulo = titulo;
 		this.autor = autor;
-		this.añoEdicion = añoEdicion;
+		this.aÃ±oEdicion= aÃ±oEdicion;
 	}
 	
 	public Artista getAutor() {
@@ -27,14 +27,14 @@ public abstract class Obra {
 		this.autor = autor;
 	}
 
-	public int getAñoEdicion() {
+	public int getAÃ±oEdicion() {
 		
-		return añoEdicion;
+		return aÃ±oEdicion;
 	}
 
-	public void setAñoEdicion(int añoEdicion) {
+	public void setAÃ±oEdicion(int aÃ±oEdicion) {
 		
-		this.añoEdicion = añoEdicion;
+		this.aÃ±oEdicion = aÃ±oEdicion;
 	}
 
 	public String getTitulo() {

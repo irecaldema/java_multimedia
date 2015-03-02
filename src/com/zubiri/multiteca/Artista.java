@@ -3,12 +3,12 @@ package com.zubiri.multiteca;
 public class Artista {
 
 	private String nombre;
-	private int añoNacimiento;
+	private int aÃ±oNacimiento;
 
-	public Artista(String nombre, int añoNacimiento) {
+	public Artista(String nombre, int aÃ±oNacimiento) {
 	
 		this.nombre = nombre;
-		this.añoNacimiento = añoNacimiento;
+		this.aÃ±oNacimiento = aÃ±oNacimiento;
 	}
 	
 	public String getNombre() {
@@ -21,14 +21,14 @@ public class Artista {
 		this.nombre = nombre;
 	}
 	
-	public int getAñoNacimiento() {
+	public int getAÃ±oNacimiento() {
 		
-		return añoNacimiento;
+		return aÃ±oNacimiento;
 	}
 
-	public void setAñoNacimiento(int añoNacimiento) {
+	public void setAÃ±oNacimiento(int aÃ±oNacimiento) {
 		
-		this.añoNacimiento = añoNacimiento;
+		this.aÃ±oNacimiento = aÃ±oNacimiento;
 	}
 	
 }

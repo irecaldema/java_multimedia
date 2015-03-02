@@ -5,8 +5,10 @@ public class Disco extends Obra{
 	private String discografia;
 	private int nCanciones;
 	
-	public Disco(String titulo, Artista autor, int a�oEdicion, String discografia, int nCanciones) {
-		
+	public Disco(String titulo, Artista autor, int añoEdicion, String discografia, int nCanciones) {
+		super(titulo,autor,añoEdicion);
+		setDiscografia(discografia);
+		setnCanciones(nCanciones);
 	}
 	
 	public String getDiscografia() {

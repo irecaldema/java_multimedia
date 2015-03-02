@@ -7,8 +7,10 @@ public class Pelicula extends Obra{
 	private String productora;
 	private ArrayList<Artista> interpretes;
 	
-	public Pelicula(String titulo, Artista autor, int a�oEdicion, String productora, ArrayList<Artista> interpretes) {
-		
+	public Pelicula(String titulo, Artista autor, int añoEdicion, String productora, ArrayList<Artista> interpretes) {
+		super(titulo,autor,añoEdicion);
+		setProductora(productora);
+		setInterpretes(interpretes);
 	}
 		
 	public String getProductora() {
