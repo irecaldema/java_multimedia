@@ -100,14 +100,14 @@ public final class Multiteca {
 				System.out.println("No ha insertado la opción correcta");
 				sc.nextLine();
 			}
-		}while(seleccion>0);
+		}while(seleccion<0);
 		
 		for (int i = 0; i < seleccion; i++) {
 			try{
 				System.out.println("¿Qué obra quieres insertar?");
-				System.out.println("Disco:--------1");
+				System.out.println("Disco:-------------1");
 				System.out.println("Pelicula:----------2");
-				System.out.println("Libro:--------3");
+				System.out.println("Libro:-------------3");
 			    
 				switch(sc.nextInt()) {
 					case 1:

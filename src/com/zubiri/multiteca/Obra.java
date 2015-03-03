@@ -1,6 +1,7 @@
 package com.zubiri.multiteca;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public /*abstract*/ class Obra {
 	
@@ -11,12 +12,22 @@ public /*abstract*/ class Obra {
 	public Obra() {
 		
 	}
+	public Obra(Scanner sc) {
+		System.out.println("Introduce los siguientes datos por teclado: ");
+		System.out.println("Titulo: ");		
+		setTitulo(sc.next());
+		System.out.println("Autor: ");
+		Artista autor = new Artista(sc);
+		setAutor(autor);
+		System.out.println("Año de edición: ");			
+		setAñoEdicion(sc.nextInt());
+	}	
 	
 	public Obra(String titulo, Artista autor, int añoEdicion) {
 	
-		this.titulo = titulo;
-		this.autor = autor;
-		this.añoEdicion= añoEdicion;
+		setTitulo(titulo);
+		setAutor(autor);
+		setAñoEdicion(añoEdicion);
 	}
 	
 	public Obra (String linedObra, String separador) {
@@ -76,6 +87,11 @@ public /*abstract*/ class Obra {
 	public String getTitulo() {
 		
 		return titulo;
+	}
+	
+	public void setTitulo(String titulo) {
+		
+		this.titulo = titulo;
 	}
 	
 	public String formattedObra() {

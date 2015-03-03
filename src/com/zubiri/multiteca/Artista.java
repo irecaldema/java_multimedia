@@ -1,5 +1,7 @@
 package com.zubiri.multiteca;
 
+import java.util.Scanner;
+
 public class Artista {
 
 	private String nombre;
@@ -16,7 +18,14 @@ public class Artista {
 		String[] separados = artista.split(separador);
 		setNombre(separados[0]);
 		setAñoNacimiento(Integer.parseInt(separados[1]));
-	}	
+	}
+	
+	public Artista (Scanner sc){
+		System.out.println("nombre: ");
+		setNombre(sc.next());	
+		System.out.println("Año de nacimiento: ");
+		setAñoNacimiento(sc.nextInt());
+	}
 	
 	public String getNombre() {
 		

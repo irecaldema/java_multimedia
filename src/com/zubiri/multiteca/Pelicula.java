@@ -12,10 +12,20 @@ public class Pelicula extends Obra{
 		super(titulo,autor,añoEdicion);
 		setProductora(productora);
 		setInterpretes(interpretes);
+		Multiteca.addObra(this);
 	}
 	
 	public Pelicula (Scanner sc){
-		
+		super();
+		System.out.println("Productora: ");
+		setProductora(sc.next());
+		System.out.println("¿Cuantos interpretes tiene?");
+		for (int i=0; sc.nextInt()<i; i++){
+		System.out.println(i+"º interprete: ");			
+			Artista interprete = new Artista(sc);
+			addInterprete(interprete);
+		}
+		Multiteca.addObra(this);
 	}
 		
 	public String getProductora() {
@@ -36,6 +46,11 @@ public class Pelicula extends Obra{
 	public void setInterpretes(ArrayList<Artista> interpretes) {
 		
 		this.interpretes = interpretes;
+	}
+	
+	public void addInterprete(Artista interprete) {
+		
+		interpretes.add(interprete);
 	}
 	
 	@Override public String formattedObra() {

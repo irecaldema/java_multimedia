@@ -12,10 +12,16 @@ public class Libro extends Obra{
 		super(titulo,autor,añoEdicion);
 		setEditorial(editorial);
 		setNumPaginas(numPaginas);
+		Multiteca.addObra(this);
 	}
 	
 	public Libro (Scanner sc){
-		
+		super();
+		System.out.println("Editorial: ");
+		setEditorial(sc.next());
+		System.out.println("Número de páginas: ");
+		setNumPaginas(sc.nextInt());
+		Multiteca.addObra(this);
 	}
 	
 	public String getEditorial() {
