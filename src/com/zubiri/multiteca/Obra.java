@@ -32,13 +32,13 @@ public /*abstract*/ class Obra {
 			Disco disco = new Disco(separados[1],autor,Integer.parseInt(separados[3]),separados[4],Integer.parseInt(separados[5]));
 			Multiteca.addObra(disco);
 		}else if(separados[0].equalsIgnoreCase("pelicula")){
-			String[] interpretes_beta = separados[5].split("#");
-			ArrayList<Artista> interpretes;
-			for (int i=0;interpretes.size()<i;i++){
-				Artista autor = new Artista(interpretes_beta[i],";");
-				interpretes.add(autor);
+			String[] interpretes = separados[5].split("#");
+			ArrayList<Artista> al_interpretes = new ArrayList<Artista>();;
+			for (int i=0;interpretes.length<i;i++){
+				Artista autor = new Artista(interpretes[i],";");
+				al_interpretes.add(autor);
 			}
-			Pelicula pelicula = new Pelicula(separados[1],autor,Integer.parseInt(separados[3]),separados[4],interpretes);
+			Pelicula pelicula = new Pelicula(separados[1],autor,Integer.parseInt(separados[3]),separados[4],al_interpretes);
 			Multiteca.addObra(pelicula);
 		}
 	}
