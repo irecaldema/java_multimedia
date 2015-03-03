@@ -16,7 +16,7 @@ public class Libro extends Obra{
 	}
 	
 	public Libro (Scanner sc){
-		super();
+		super(sc);
 		System.out.println("Editorial: ");
 		setEditorial(sc.next());
 		System.out.println("Número de páginas: ");

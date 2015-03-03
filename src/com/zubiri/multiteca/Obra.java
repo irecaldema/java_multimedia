@@ -13,7 +13,7 @@ public /*abstract*/ class Obra {
 		
 	}
 	public Obra(Scanner sc) {
-		System.out.println("Introduce los siguientes datos por teclado: ");
+		System.out.println("Introducción de datos: ");
 		System.out.println("Titulo: ");		
 		setTitulo(sc.next());
 		System.out.println("Autor: ");
@@ -30,20 +30,18 @@ public /*abstract*/ class Obra {
 		setAñoEdicion(añoEdicion);
 	}
 	
-	public Obra (String linedObra, String separador) {
+	public Obra (String lineaObra, String separador) {
 		
-		String[] separados = linedObra.split(separador);
+		String[] separados = lineaObra.split(separador);
 		if (separados[0].equalsIgnoreCase("libro")) {
 			
 			Artista autor = new Artista(separados[2],";");
 			Libro libro = new Libro(separados[1],autor,Integer.parseInt(separados[3]),separados[4],Integer.parseInt(separados[5]));
-			Multiteca.addObra(libro);
 			
 		}else if(separados[0].equalsIgnoreCase("disco")) {
 			
 			Artista autor = new Artista(separados[2],";");
 			Disco disco = new Disco(separados[1],autor,Integer.parseInt(separados[3]),separados[4],Integer.parseInt(separados[5]));
-			Multiteca.addObra(disco);
 			
 		}else if(separados[0].equalsIgnoreCase("pelicula")) {
 			
@@ -60,7 +58,6 @@ public /*abstract*/ class Obra {
 			}
 			
 			Pelicula pelicula = new Pelicula(separados[1],autor,Integer.parseInt(separados[3]),separados[4],al_interpretes);
-			Multiteca.addObra(pelicula);
 		}
 	}
 	

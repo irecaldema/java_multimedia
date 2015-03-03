@@ -71,9 +71,6 @@ public final class Multiteca {
 			
 			while ((linea != null) && (linea.compareTo("") != 0)) {
 				Obra obra = new Obra(linea,",");
-				if(obra.getTitulo()!=null){
-					addObra(obra);
-				}	
 				linea = br.readLine();
 			}
 			br.close();

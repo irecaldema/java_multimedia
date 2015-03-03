@@ -16,7 +16,7 @@ public class Disco extends Obra{
 	}
 	
 	public Disco (Scanner sc){
-		super();
+		super(sc);
 		System.out.println("Discografica: ");
 		setDiscografica(sc.next());
 		System.out.println("Número de canciones: ");
