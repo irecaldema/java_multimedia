@@ -16,6 +16,7 @@ public final class Multiteca {
 
 	public Multiteca(ArrayList<Obra> obras) {
 		
+		setMultiteca(obras);
 	}
 	
 	public void setMultiteca(ArrayList<Obra> obras) {
@@ -49,7 +50,7 @@ public final class Multiteca {
 		return formattedMultiteca;
 	}
 	
-	public static void leerDistribuidores(String fichero) throws IOException {
+	public static void leerObras(String fichero) throws IOException {
 			String linea;
 			FileInputStream f;
 		    InputStreamReader fr;
@@ -68,8 +69,19 @@ public final class Multiteca {
 				Obra obra = new Obra(linea,",");
 				multiteca.add(obra);
 				linea = br.readLine();
+				numObras++;
 			}
 			br.close();
 	 }
+	 
+	public static void mostrarObras() {
+		
+		if (multiteca.size() == 0) {
+			System.out.println("No se han cargado los distribuidores del fichero");
+		}
+		for (int i = 0;i < multiteca.size();i++) {
+			System.out.println(multiteca.get(i).formattedMultiteca());
+		}
+	}
 	
 }
