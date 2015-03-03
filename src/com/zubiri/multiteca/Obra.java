@@ -1,5 +1,7 @@
 package com.zubiri.multiteca;
 
+import java.util.ArrayList;
+
 public /*abstract*/ class Obra {
 	
 	private String titulo;
@@ -21,18 +23,23 @@ public /*abstract*/ class Obra {
 		
 		
 		String[] separados = linedObra.split(separador);
-		if (separados[0].equalignorecase("libro")){
-			Artista autor new Artista(separados[2],";")
-			Libro libro = new Libro(separados[1],separados[2],separados[3],separados[4],separados[5]);
+		if (separados[0].equalsIgnoreCase("libro")){
+			Artista autor = new Artista(separados[2],";");
+			Libro libro = new Libro(separados[1],autor,Integer.parseInt(separados[3]),separados[4],Integer.parseInt(separados[5]));
 			Multiteca.addObra(libro);
-		}else if(separados[0].equalignorecase("disco")){
-			Artista autor new Artista(separados[2],";")
-			Disco disco = new Disco(separados[1],separados[2],separados[3],separados[4],separados[5]);
+		}else if(separados[0].equalsIgnoreCase("disco")){
+			Artista autor = new Artista(separados[2],";");
+			Disco disco = new Disco(separados[1],autor,Integer.parseInt(separados[3]),separados[4],Integer.parseInt(separados[5]));
 			Multiteca.addObra(disco);
-		}else if(separados[0].equalignorecase("pelicula")){
-			Artista autor new Artista(separados[2],";")
-			Disco disco = new Disco(separados[1],separados[2],separados[3],separados[4],separados[5]);
-			Multiteca.addObra(disco);
+		}else if(separados[0].equalsIgnoreCase("pelicula")){
+			String[] interpretes_beta = separados[5].split("#");
+			ArrayList<Artista> interpretes;
+			for (int i=0;interpretes.size()<i;i++){
+				Artista autor = new Artista(interpretes_beta[i],";");
+				interpretes.add(autor);
+			}
+			Pelicula pelicula = new Pelicula(separados[1],autor,Integer.parseInt(separados[3]),separados[4],interpretes);
+			Multiteca.addObra(pelicula);
 		}
 	}
 	

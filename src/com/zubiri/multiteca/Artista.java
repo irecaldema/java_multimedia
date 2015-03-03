@@ -15,7 +15,7 @@ public class Artista {
 		
 		String[] separados = artista.split(separador);
 		setNombre(separados[0]);
-		setAñoNacimiento(separados[1]);
+		setAñoNacimiento(Integer.parseInt(separados[1]));
 	}	
 	
 	public String getNombre() {
