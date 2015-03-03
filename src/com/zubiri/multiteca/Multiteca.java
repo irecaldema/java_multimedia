@@ -82,7 +82,7 @@ public final class Multiteca {
 		if (multiteca.size() == 0) {
 			System.out.println("No se han cargado las obras");
 		}
-		for (int i = 0;i < multiteca.size();i++) {
+		for (int i = 0; i<multiteca.size(); i++) {
 			System.out.println(multiteca.get(i).formattedObra());
 		}
 	}
