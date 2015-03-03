@@ -43,15 +43,14 @@ public class Pelicula extends Obra{
 		String formattedObra=
 			super.formattedObra()+
 			"\nProductora: "+this.productora+
-			"\ninterpretes: "+
 			this.formattedInterprete();
 		return formattedObra;	
 	}
 	
 	public String formattedInterprete(){
-		String interprete="";
-		for (int i=0; interpretes.size()<i; i++) {
-			interprete+="\n\tActor: "+this.interpretes.get(i).getNombre()+" Nacimiento: "+this.interpretes.get(i).getAñoNacimiento();
+		String interprete="\ninterpretes: "+ interpretes.size();
+		for (int i=0; i<interpretes.size(); i++) {
+			interprete+="\n\tInterprete: "+this.interpretes.get(i).getNombre()+" Nacimiento: "+this.interpretes.get(i).getAñoNacimiento();
 		}
 			return interprete;	
 	}
