@@ -33,7 +33,7 @@ public /*abstract*/ class Obra {
 			Multiteca.addObra(disco);
 		}else if(separados[0].equalsIgnoreCase("pelicula")){
 			String[] interpretes = separados[5].split("#");
-			ArrayList<Artista> al_interpretes = new ArrayList<Artista>();;
+			ArrayList<Artista> al_interpretes = new ArrayList<Artista>();
 			for (int i=0;interpretes.length<i;i++){
 				Artista autor = new Artista(interpretes[i],";");
 				al_interpretes.add(autor);
