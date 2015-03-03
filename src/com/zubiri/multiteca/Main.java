@@ -13,8 +13,7 @@ public final class Main {
 		int seleccion=0;
 		int error=0;
 		Scanner sc = new Scanner(System.in);
-		Productos productos = null;
-		
+
     	//Leemos la lista de distribuidores del fichero.
     	do{
 	    	try {
@@ -28,34 +27,29 @@ public final class Main {
 	    	} catch (FileNotFoundException errorifico) {
 	    		System.out.println("El archivo de distribuidores no es el correcto");
 	    		error=1;
+	    	} catch (IOException e){
 	    	}	
-		}while(Distribuidores.getDistribuidores().size()==0);	
+		}while(Multiteca.getMultiteca().size()==0);	
 
 		do {
 			try{
 				//Visualiza por terminal (stdout) las opciones del menú
-				System.out.println("Mostrar distribuidores---------------------------1");
-				System.out.println("Solicitar productos------------------------------2");
-				System.out.println("Mostrar productos--------------------------------3");
-				System.out.println("SALIR DEL PROGRAMA-------------------------------4");
+				System.out.println("Mostrar multiteca--------------------------------1");
+				System.out.println("Introducir obras---------------------------------2");
+				System.out.println("SALIR DEL PROGRAMA-------------------------------3");
 				   
 				seleccion = sc.nextInt();
 				switch (seleccion) {
 					
 					case 1: //Mostrar distribuidores
-						Distribuidores.mostrarDistribuidores();
+						Multiteca.mostrarMultiteca();
 						break;
 						
 					case 2: //Solicitar productos
-						productos = new Productos(sc);
+						Multiteca.introducir(sc);
 						break;
-					case 3: //Mostrar productos
-						if (productos == null) {
-							System.out.println("No es posible mostrar productos sin haber sido solicitados");
-						}
-						productos.mostrarProductos();
-						break;
-					case 4: //Salimos
+						
+					case 3: //Salimos
 						break;
 					default:
 						System.out.println("No ha insertado la opción correcta");

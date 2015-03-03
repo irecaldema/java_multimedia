@@ -1,4 +1,3 @@
-Nestle,34562134,calle;Amadeo;1;;3;A,Aritz;Jareto;55459809T;calle-Amadeo-1-dcha-3-A;MOVIL-34--679394859
-Kellogs,0987564,calle;Soria;2;dcha;1;D,Bernard;Beltran;55459809Y;calle-Soria-2-dcha-1-D;FIJO--943-453456
-FrutosGerardo,10293847,avenida;Alcantara;3;izda;4;B,Juan;almodovar;55459809B;calle-Soria-2-dcha-1-D;MOVIL-34--679334213
-Asturiana,34876511,camino;Rojizos;5;;7;A,Telmo;Jaenz;55459809A;calle-Soria-2-dcha-1-D;FIJO--943-334556
+Libro, String titulo, Artista autor, int añoEdicion, String editorial, int numPaginas
+Disco, String titulo, Artista autor, int añoEdicion, String discografia, int nCanciones
+Pelicula, String titulo, Artista autor, int añoEdicion, String productora, ArrayList<Artista> interpretes

@@ -1,5 +1,7 @@
 package com.zubiri.multiteca;
 
+import java.util.Scanner;
+
 public class Disco extends Obra{
 	
 	private String discografia;
@@ -10,6 +12,10 @@ public class Disco extends Obra{
 		super(titulo,autor,añoEdicion);
 		setDiscografia(discografia);
 		setnCanciones(nCanciones);
+	}
+	
+	public Disco (Scanner sc){
+		
 	}
 	
 	public String getDiscografia() {

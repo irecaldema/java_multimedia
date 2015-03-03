@@ -11,6 +11,13 @@ public class Artista {
 		this.añoNacimiento = añoNacimiento;
 	}
 	
+	public Artista(String artista, String separador) {
+		
+		String[] separados = artista.split(separador);
+		setNombre(separados[0]);
+		setAñoNacimiento(separados[1]);
+	}	
+	
 	public String getNombre() {
 		
 		return nombre;

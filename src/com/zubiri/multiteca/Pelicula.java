@@ -1,6 +1,7 @@
 package com.zubiri.multiteca;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Pelicula extends Obra{
 
@@ -11,6 +12,10 @@ public class Pelicula extends Obra{
 		super(titulo,autor,añoEdicion);
 		setProductora(productora);
 		setInterpretes(interpretes);
+	}
+	
+	public Pelicula (Scanner sc){
+		
 	}
 		
 	public String getProductora() {

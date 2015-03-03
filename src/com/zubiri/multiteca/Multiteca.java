@@ -1,9 +1,12 @@
 package com.zubiri.multiteca;
 
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.InputMismatchException;
 
 public final class Multiteca {
 	
@@ -24,7 +27,7 @@ public final class Multiteca {
 		multiteca=obras;
 	}
 	
-	public ArrayList<Obra> getMultiteca() {
+	public static ArrayList<Obra> getMultiteca() {
 		
 		return multiteca;
 	}
@@ -74,13 +77,57 @@ public final class Multiteca {
 			br.close();
 	 }
 	 
-	public static void mostrarObras() {
+	public static void mostrarMultiteca() {
 		
 		if (multiteca.size() == 0) {
 			System.out.println("No se han cargado los distribuidores del fichero");
 		}
 		for (int i = 0;i < multiteca.size();i++) {
-			System.out.println(multiteca.get(i).formattedMultiteca());
+			System.out.println(multiteca.get(i).formattedObra());
+		}
+	}
+	
+	public static void introducir(Scanner sc) {
+		
+		int seleccion=0;
+		do{
+			try{
+				System.out.println("¿Cuantas obras quieres insertar? ");
+				seleccion = sc.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("No ha insertado la opción correcta");
+				sc.nextLine();
+			}
+		}while(seleccion>=0);
+		
+		for (int i = 0; i < seleccion; i++) {
+			try{
+				System.out.println("¿Qué obra quieres insertar?");
+				System.out.println("Disco:--------1");
+				System.out.println("Pelicula:----------2");
+				System.out.println("Libro:--------3");
+			    
+				switch(sc.nextInt()) {
+					case 1:
+						Disco disco = new Disco(sc);
+						multiteca.add(disco);
+						break;
+					case 2:
+						Pelicula pelicula = new Pelicula(sc);
+						multiteca.add(pelicula);
+						break;
+					case 3:
+						Libro libro = new Libro(sc);
+						multiteca.add(libro);
+						break;
+					default:
+						System.out.println("No ha insertado la opción correcta.");
+						break;
+				}
+			}catch(InputMismatchException e){
+				System.out.println("No ha insertado la opción correcta");
+				sc.nextLine();
+			}
 		}
 	}
 	

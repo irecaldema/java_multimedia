@@ -1,5 +1,7 @@
 package com.zubiri.multiteca;
 
+import java.util.Scanner;
+
 public class Libro extends Obra{
 	
 	private String editorial;
@@ -10,6 +12,10 @@ public class Libro extends Obra{
 		super(titulo,autor,añoEdicion);
 		setEditorial(editorial);
 		setNumPaginas(numPaginas);
+	}
+	
+	public Libro (Scanner sc){
+		
 	}
 	
 	public String getEditorial() {
