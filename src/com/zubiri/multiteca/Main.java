@@ -15,20 +15,15 @@ public final class Main {
 		Scanner sc = new Scanner(System.in);
 		Productos productos = null;
 		
-		if (args.length == 0) {
-			System.out.println("El número de argumentos no es válido:");
-			System.out.println("java main <fichero_distribuidores>");
-			System.exit(-1);
-		} 
-		
     	//Leemos la lista de distribuidores del fichero.
     	do{
 	    	try {
 	    		if (error==0){
-					Distribuidores.leerDistribuidores(args[0]);
+	    			System.out.println("Escriba el nombre del fichero de la multiteca:");
+					Multiteca.leerObras(sc.next());
 	    		}	
 				else{	
-					Distribuidores.leerDistribuidores("../"+sc.next());//una carpeta hacia arriba de src/
+					Multiteca.leerObras(sc.next());
 	    		}
 	    	} catch (FileNotFoundException errorifico) {
 	    		System.out.println("El archivo de distribuidores no es el correcto");
@@ -38,7 +33,7 @@ public final class Main {
 
 		do {
 			try{
-				//Visualiza por terminal (stdout) las opciones del men�
+				//Visualiza por terminal (stdout) las opciones del menú
 				System.out.println("Mostrar distribuidores---------------------------1");
 				System.out.println("Solicitar productos------------------------------2");
 				System.out.println("Mostrar productos--------------------------------3");
@@ -73,5 +68,4 @@ public final class Main {
 		System.out.println("Gracias por usar nuestro programa. Que tenga un buen día!");
 		sc.close();
 	}
-
 }

@@ -1,6 +1,9 @@
 package com.zubiri.multiteca;
 
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 
 public final class Multiteca {
 	
@@ -45,5 +48,28 @@ public final class Multiteca {
 		String formattedMultiteca="";
 		return formattedMultiteca;
 	}
+	
+	public static void leerDistribuidores(String fichero) throws IOException {
+			String linea;
+			FileInputStream f;
+		    InputStreamReader fr;
+		    BufferedReader br;
+		    
+		    f = new FileInputStream(fichero);
+	    	fr = new InputStreamReader(f, "UTF8");
+	    	br = new BufferedReader(fr);
+	    	linea = br.readLine();
+			
+			if (linea == null) {
+				System.out.println("No existen obras en el fichero");
+			}
+			
+			while ((linea != null) && (linea.compareTo("") != 0)) {
+				Obra obra = new Obra(linea,",");
+				multiteca.add(obra);
+				linea = br.readLine();
+			}
+			br.close();
+	 }
 	
 }
