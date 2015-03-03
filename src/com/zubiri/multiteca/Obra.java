@@ -70,7 +70,10 @@ public /*abstract*/ class Obra {
 	
 	public String formattedObra() {
 		
-		String formattedObra="";
+		String formattedObra=
+			"\nObra: "+this.titulo+
+			this.autor.formattedArtista()+
+			"\nAño edicion: "+this.añoEdicion;
 		return formattedObra;
 	}
 }

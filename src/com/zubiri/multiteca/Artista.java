@@ -38,4 +38,11 @@ public class Artista {
 		this.añoNacimiento = añoNacimiento;
 	}
 	
+	public String formattedArtista() {
+		
+		String formattedObra=
+			"\nAutor: "+this.nombre+" Nacimiento: "+this.añoNacimiento;
+		return formattedObra;
+	}
+	
 }

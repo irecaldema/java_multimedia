@@ -38,9 +38,12 @@ public class Libro extends Obra{
 		this.numPaginas = numPaginas;
 	}
 	
-	public String formattedObra() {
+	@Override public String formattedObra() {
 		
-		String formattedObra=super.formattedObra()+"";
+		String formattedObra=
+			super.formattedObra()+
+			"\nEditorial: "+this.editorial+
+			"\nNúmero de páginas: "+this.numPaginas;
 		return formattedObra;	
 	}
 

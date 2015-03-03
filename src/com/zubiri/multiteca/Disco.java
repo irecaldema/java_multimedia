@@ -38,9 +38,12 @@ public class Disco extends Obra{
 		this.nCanciones = nCanciones;
 	}
 	
-	public String formattedObra() {
+	@Override public String formattedObra() {
 		
-		String formattedObra=super.formattedObra()+"";
+		String formattedObra=
+			super.formattedObra()+
+			"\nDiscografica: "+this.discografica+
+			"\nNumero de canciones: "+this.nCanciones;
 		return formattedObra;	
 	}
 }

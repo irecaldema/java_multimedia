@@ -58,7 +58,7 @@ public final class Main {
 				System.out.println("No ha insertado la opción correcta");
 				sc.nextLine();
 			}
-		} while (seleccion != 4);
+		} while (seleccion != 3);
 		System.out.println("Gracias por usar nuestro programa. Que tenga un buen día!");
 		sc.close();
 	}

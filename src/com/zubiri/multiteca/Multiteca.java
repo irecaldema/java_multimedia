@@ -80,7 +80,7 @@ public final class Multiteca {
 	public static void mostrarMultiteca() {
 		
 		if (multiteca.size() == 0) {
-			System.out.println("No se han cargado los distribuidores del fichero");
+			System.out.println("No se han cargado las obras");
 		}
 		for (int i = 0;i < multiteca.size();i++) {
 			System.out.println(multiteca.get(i).formattedObra());
