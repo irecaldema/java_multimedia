@@ -21,23 +21,31 @@ public /*abstract*/ class Obra {
 	
 	public Obra (String linedObra, String separador) {
 		
-		
 		String[] separados = linedObra.split(separador);
-		if (separados[0].equalsIgnoreCase("libro")){
+		if (separados[0].equalsIgnoreCase("libro")) {
+			
 			Artista autor = new Artista(separados[2],";");
 			Libro libro = new Libro(separados[1],autor,Integer.parseInt(separados[3]),separados[4],Integer.parseInt(separados[5]));
 			Multiteca.addObra(libro);
-		}else if(separados[0].equalsIgnoreCase("disco")){
+			
+		}else if(separados[0].equalsIgnoreCase("disco")) {
+			
 			Artista autor = new Artista(separados[2],";");
 			Disco disco = new Disco(separados[1],autor,Integer.parseInt(separados[3]),separados[4],Integer.parseInt(separados[5]));
 			Multiteca.addObra(disco);
-		}else if(separados[0].equalsIgnoreCase("pelicula")){
+			
+		}else if(separados[0].equalsIgnoreCase("pelicula")) {
+			
+			Artista autor = new Artista(separados[2],";");
+			
 			String[] interpretes = separados[5].split("#");
 			ArrayList<Artista> al_interpretes = new ArrayList<Artista>();
+			
 			for (int i=0;interpretes.length<i;i++){
-				Artista autor = new Artista(interpretes[i],";");
-				al_interpretes.add(autor);
+				Artista interprete = new Artista(interpretes[i],";");
+				al_interpretes.add(interprete);
 			}
+			
 			Pelicula pelicula = new Pelicula(separados[1],autor,Integer.parseInt(separados[3]),separados[4],al_interpretes);
 			Multiteca.addObra(pelicula);
 		}

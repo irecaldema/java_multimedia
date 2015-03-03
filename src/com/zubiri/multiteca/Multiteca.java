@@ -38,7 +38,7 @@ public final class Multiteca {
 		numObras++;
 	}
 	
-	public Obra obtainObra(int index) {
+	public static Obra obtainObra(int index) {
 		
 		return multiteca.get(index);
 	}
@@ -71,7 +71,9 @@ public final class Multiteca {
 			
 			while ((linea != null) && (linea.compareTo("") != 0)) {
 				Obra obra = new Obra(linea,",");
-				addObra(obra);
+				if(obra.getTitulo()!=null){
+					addObra(obra);
+				}	
 				linea = br.readLine();
 			}
 			br.close();

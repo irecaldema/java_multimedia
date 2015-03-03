@@ -30,7 +30,9 @@ public final class Main {
 	    	} catch (IOException e){
 	    	}	
 		}while(Multiteca.getMultiteca().size()==0);	
-
+		
+		System.out.println("Numero de obras "+Multiteca.counter()+"\n");
+		
 		do {
 			try{
 				//Visualiza por terminal (stdout) las opciones del menú
