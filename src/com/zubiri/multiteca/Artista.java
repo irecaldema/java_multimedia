@@ -41,7 +41,7 @@ public class Artista {
 	public String formattedArtista() {
 		
 		String formattedObra=
-			"\nAutor: "+this.nombre+" Nacimiento: "+this.añoNacimiento;
+			"\nAutor: "+this.nombre+" Año de nacimiento: "+this.añoNacimiento;
 		return formattedObra;
 	}
 	

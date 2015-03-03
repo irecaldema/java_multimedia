@@ -73,7 +73,7 @@ public /*abstract*/ class Obra {
 		String formattedObra=
 			"\nObra: "+this.titulo+
 			this.autor.formattedArtista()+
-			"\nAño edicion: "+this.añoEdicion;
+			"\nAño de edicion: "+this.añoEdicion;
 		return formattedObra;
 	}
 }
