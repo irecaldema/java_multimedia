@@ -98,7 +98,7 @@ public final class Multiteca {
 				System.out.println("No ha insertado la opción correcta");
 				sc.nextLine();
 			}
-		}while(seleccion>=0);
+		}while(seleccion>0);
 		
 		for (int i = 0; i < seleccion; i++) {
 			try{

@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Disco extends Obra{
 	
-	private String discografia;
+	private String discografica;
 	private int nCanciones;
 	
-	public Disco(String titulo, Artista autor, int añoEdicion, String discografia, int nCanciones) {
+	public Disco(String titulo, Artista autor, int añoEdicion, String discografica, int nCanciones) {
 		
 		super(titulo,autor,añoEdicion);
-		setDiscografia(discografia);
+		setdiscografica(discografica);
 		setnCanciones(nCanciones);
 	}
 	
@@ -18,14 +18,14 @@ public class Disco extends Obra{
 		
 	}
 	
-	public String getDiscografia() {
+	public String getdiscografica() {
 		
-		return discografia;
+		return discografica;
 	}
 	
-	public void setDiscografia(String discografia) {
+	public void setdiscografica(String discografica) {
 		
-		this.discografia = discografia;
+		this.discografica = discografica;
 	}
 	
 	public int getnCanciones() {

@@ -1,3 +1,0 @@
-Libro, String titulo, Artista autor	String nombre;	int añoNacimiento, int añoEdicion, String editorial, int numPaginas
-Disco, String titulo, Artista autor String nombre;	int añoNacimiento, int añoEdicion, String discografia, int nCanciones
-Pelicula, String titulo, Artista autor String nombre;	int añoNacimiento, int añoEdicion, String productora, ArrayList<Artista> interpretes String nombre;	int añoNacimiento;#String nombre;	int añoNacimiento#String nombre;	int añoNacimiento
