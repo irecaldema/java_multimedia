@@ -1,6 +1,7 @@
 package com.zubiri.multiteca;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Artista {
 
@@ -52,6 +53,14 @@ public class Artista {
 		String formattedObra=
 			"\nAutor: "+this.nombre+"| Año de nacimiento: "+this.añoNacimiento;
 		return formattedObra;
+	}
+	
+	public String formattedInterpretes(ArrayList al_interpretes){
+		String s_interpretes="\ninterpretes: "+ al_interpretes.size();
+		for (int i=0; i<al_interpretes.size(); i++) {
+			s_interpretes+="\n\tInterprete: "+al_interpretes.get(i).getNombre()+" | Año de nacimiento: "+al_interpretes.get(i).getAñoNacimiento();
+		}
+			return s_interpretes;	
 	}
 	
 }
