@@ -48,9 +48,7 @@ public /*abstract*/ class Obra {
 			Artista autor = new Artista(separados[2],";");
 			
 			ArrayList<Artista> al_interpretes = new ArrayList<Artista>();
-			//Jeremy Irons;1948#Ed Harris;1950#Viggo Mortensen;1958#Renée Zellweger;1969
 			String[] interpretes = separados[5].split("#");
-			//Jeremy Irons;1948
 			for (int i=0;i<interpretes.length;i++){
 				
 				Artista interprete = new Artista(interpretes[i],";");
