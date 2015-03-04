@@ -49,7 +49,7 @@ public class Disco extends Obra{
 		String formattedObra=
 			super.formattedObra()+
 			"\nDiscografica: "+this.discografica+
-			"\nNumero de canciones: "+this.nCanciones;
+			"\nNumero de canciones: "+this.nCanciones+"\n";
 		return formattedObra;	
 	}
 }

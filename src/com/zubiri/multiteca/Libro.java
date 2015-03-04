@@ -49,7 +49,7 @@ public class Libro extends Obra{
 		String formattedObra=
 			super.formattedObra()+
 			"\nEditorial: "+this.editorial+
-			"\nNúmero de páginas: "+this.numPaginas;
+			"\nNúmero de páginas: "+this.numPaginas+"\n";
 		return formattedObra;	
 	}
 

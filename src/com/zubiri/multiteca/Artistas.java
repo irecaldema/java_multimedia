@@ -38,7 +38,7 @@ public class Artistas {
 		String s_interpretes="\ninterpretes: "+ al_interpretes.size();
 		for (int i=0; i<al_interpretes.size(); i++) {
 		    Artista interprete = al_interpretes.get(i);
-			s_interpretes+=interprete.formattedArtista();
+			s_interpretes+="\n\t"+interprete.formattedArtista();
 		}
 			return s_interpretes;	
 	}
