@@ -1,0 +1,3 @@
+Libro,El nombre del viento,Patrick Rothfuss;1973,2007,DAW Books,873
+Disco,Musica para tontos,Anonimo;0,2000,Wave Music,2
+Pelicula,Appaloosa,Ed Harris;1950,2008,New Line Cinema-Axon Films-Groundswell Productions,Jeremy Irons;1948#Ed Harris;1950#Viggo Mortensen;1958#Renée Zellweger;1969
