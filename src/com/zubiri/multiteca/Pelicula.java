@@ -58,7 +58,7 @@ public class Pelicula extends Obra{
 		String formattedObra=
 			super.formattedObra()+
 			"\nProductora: "+this.productora+
-			Artista.formattedInterpretes(interpretes);
+			Artistas.formattedInterpretes(this.interpretes);
 		return formattedObra;	
 	}
 
