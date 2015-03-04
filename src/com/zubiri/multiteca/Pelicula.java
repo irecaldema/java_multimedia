@@ -65,7 +65,7 @@ public class Pelicula extends Obra{
 	public String formattedInterprete(){
 		String interprete="\ninterpretes: "+ interpretes.size();
 		for (int i=0; i<interpretes.size(); i++) {
-			interprete+="\n\tInterprete: "+this.interpretes.get(i).getNombre()+"| Año de nacimiento: "+this.interpretes.get(i).getAñoNacimiento();
+			interprete+="\n\tInterprete: "+this.interpretes.get(i).getNombre()+" | Año de nacimiento: "+this.interpretes.get(i).getAñoNacimiento();
 		}
 			return interprete;	
 	}
