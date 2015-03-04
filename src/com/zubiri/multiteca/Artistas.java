@@ -7,7 +7,7 @@ public class Artistas {
 
     private ArrayList<Artista> interpretes;
 
-	public Artistas(ArrayList interpretes) {
+	public Artistas(ArrayList<Artista> interpretes) {
 	
 		setInterpretes(interpretes);
 	}
@@ -19,7 +19,7 @@ public class Artistas {
 		setAñoNacimiento(sc.nextInt());*/
 	}
 	
-	public void setInterpretes(ArrayList interpretes) {
+	public void setInterpretes(ArrayList<Artista> interpretes) {
 		
 		this.interpretes = interpretes;
 	}
@@ -34,11 +34,10 @@ public class Artistas {
 		interpretes.add(interprete);
 	}	
 	
-	public static String formattedInterpretes(ArrayList al_interpretes){
+	public static String formattedInterpretes(ArrayList<Artista> al_interpretes){
 		String s_interpretes="\ninterpretes: "+ al_interpretes.size();
 		for (int i=0; i<al_interpretes.size(); i++) {
-		    Artista interprete =new Artista(al_interpretes.get(i).getNombre(),al_interpretes.get(i).getAñoNacimiento());
-			//s_interpretes+="\n\tInterprete: "+al_interpretes.get(i).getNombre()+" | Año de nacimiento: "+al_interpretes.get(i).getAñoNacimiento();
+		    Artista interprete = al_interpretes.get(i);
 			s_interpretes+=interprete.formattedArtista();
 		}
 			return s_interpretes;	
