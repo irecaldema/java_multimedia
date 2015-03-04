@@ -105,15 +105,12 @@ public final class Multiteca {
 				switch(sc.nextInt()) {
 					case 1:
 						Disco disco = new Disco(sc);
-						multiteca.add(disco);
 						break;
 					case 2:
 						Pelicula pelicula = new Pelicula(sc);
-						multiteca.add(pelicula);
 						break;
 					case 3:
 						Libro libro = new Libro(sc);
-						multiteca.add(libro);
 						break;
 					default:
 						System.out.println("No ha insertado la opción correcta.");
