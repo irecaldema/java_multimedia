@@ -12,13 +12,6 @@ public class Artistas {
 		setInterpretes(interpretes);
 	}
 	
-	public Artistas (Scanner sc){/*
-		System.out.println("nombre: ");
-		setNombre(sc.next());	
-		System.out.println("Año de nacimiento: ");
-		setAñoNacimiento(sc.nextInt());*/
-	}
-	
 	public void setInterpretes(ArrayList<Artista> interpretes) {
 		
 		this.interpretes = interpretes;
