@@ -35,5 +35,4 @@ public class Artistas {
 		}
 			return s_interpretes;	
 	}
-	
 }
