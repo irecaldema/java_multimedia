@@ -13,10 +13,6 @@ public final class Multiteca {
 	private static ArrayList<Obra> multiteca = new ArrayList<Obra>();
 	private static int numObras = 0;
 
-	public Multiteca() {
-		
-	}
-
 	public Multiteca(ArrayList<Obra> obras) {
 		
 		setMultiteca(obras);

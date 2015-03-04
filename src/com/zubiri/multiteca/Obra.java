@@ -9,9 +9,6 @@ public /*abstract*/ class Obra {
 	private Artista autor;
 	private int añoEdicion;
 	
-	public Obra() {
-		
-	}
 	public Obra(Scanner sc) {
 		System.out.println("Introducción de datos: ");
 		System.out.println("Titulo: ");		
