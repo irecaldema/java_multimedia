@@ -50,9 +50,9 @@ public class Artista {
 	
 	public String formattedArtista() {
 		
-		String formattedObra=
+		String formattedArtista=
 			"\nAutor: "+this.nombre+"| Año de nacimiento: "+this.añoNacimiento;
-		return formattedObra;
+		return formattedArtista;
 	}
 	
 	public String formattedInterpretes(ArrayList al_interpretes){
