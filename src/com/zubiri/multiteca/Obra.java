@@ -14,8 +14,8 @@ public /*abstract*/ class Obra {
 		System.out.println("Titulo: ");		
 		setTitulo(sc.next());
 		System.out.println("Autor: ");
-		Artista autor = new Artista(sc);
-		setAutor(autor);
+		//Artista autor = new Artista(sc);
+		setAutor(new Artista(sc));
 		System.out.println("Año de edición: ");			
 		setAñoEdicion(sc.nextInt());
 	}	
